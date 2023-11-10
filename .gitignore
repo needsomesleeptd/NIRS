@@ -26,3 +26,7 @@
 *.aux
 *Zone.Identifier
 .idea
+
+.DS_Store
+*.bkp
+*.dtmp
