@@ -1,4 +1,6 @@
 import fitz
+import matplotlib.pyplot as plt
+
 
 class UnimplementedException(BaseException):
     pass
@@ -50,4 +52,21 @@ class Parser:
     
     def parse_formulas(self):
         raise UnimplementedException
-         
+
+if __name__ == "__main__":
+    path_to_pdf = "./pdfs/main.pdf"
+
+    output_format = "png"
+    output_dir = "./images/"
+    # open the file
+    pdf_file = fitz.open(path_to_pdf)
+    parser = Parser(pdf_file)
+    images = parser.parse_images()
+    #for image in images:
+        #plt.imshow(image.get_raw_bytes())
+    print(len(images))
+
+
+
+
+
