@@ -1,5 +1,5 @@
 import fitz
-import matplotlib.pyplot as plt
+
 
 
 class UnimplementedException(BaseException):
