@@ -30,3 +30,5 @@
 .DS_Store
 *.bkp
 *.dtmp
+
+prog/images
