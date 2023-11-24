@@ -23,7 +23,7 @@ for meth in methods:
     cv2.rectangle(img2, top_left, bottom_right, 255, 2)
     cv2.rectangle(img3, top_left, bottom_right, (0, 0, 255), 2)
     # show result
-    titles = ['Matching result', 'Detected Point', 'result']
+    titles = ['Соответствие', 'Изображение', 'Результат']
     images = [res, img2, img3[:, :, ::-1]]
     plt.figure(figsize=(6, 3))
     for i in range(len(images)):
@@ -33,4 +33,5 @@ for meth in methods:
         plt.title(titles[i])
         plt.xticks([])
         plt.yticks([])
+    plt.savefig(meth+'.png')
     plt.show()
