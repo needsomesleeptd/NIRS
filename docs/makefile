@@ -3,11 +3,10 @@ MAIN = main
 FLAGS = --shell-escape -interaction=nonstopmode
 $(PDF) : $(MAIN).tex *.tex
 	pdflatex $(FLAGS) $< 
-	pdflatex  $(FLAGS) $<
-	biber main.bcf
+	biber main
 	pdflatex  $(FLAGS) $<
 	
-	make clean
+	
 
 
 
